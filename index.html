@@ -15,14 +15,27 @@
 </head>
 
 <body class="min-vh-100 d-flex flex-column">
-
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+}
+</script>
     <header>
         <div class="container">
             <nav class="navbar navbar-dark bg-transparenet">
                 <a class="navbar-brand" href="#">
-                    <img src="assets/images/logo.png" style="margin-left: -6%;margin-top: 5%;width: 20%;height: 20%;" alt="logo">
+                    <img src="assets/images/logo.png" style="margin-left: -6%;margin-top: 5%;width: 20%;height: 20%;" alt="logo" id="myInput">
+                    <!-- The button used to copy the text -->
+					<button onclick="myFunction()">Copy to clipboard</button>
                 </a>
-                
+                <!-- The text field -->
+
+
+
+
             </nav>
         </div>
     </header>
